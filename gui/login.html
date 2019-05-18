@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="linkers/login.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
+	<style>
+	body{
+	background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2F2F2, #F0F0F0, #E8E8E8 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+	</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+	<br/>
+        <div class="text-center mt-3 text-capitalize font-weight-bold mb-3">
+            <h5 class="mb-3"><u>ATTENDANCE SYSTEM BY FACE RECOGNITION USING PYTHON AND ELECTRON JS</u></h5>
+			<br/>
+			<div class="text-center mb-3">
+			<img src="icons/login.png"/>
+			<br/>
+			<h4 class="mb-3 mt-3" style="color:red"><u>Admin Login</u></h4>
+			</div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col-6 offset-3 mt-3">
+			<form class="needs-validation" novalidate id="loginclick">
+  <div class="form-group form-row mt-3">
+      <label for="email" class="col-sm-2 col-form-label font-weight-bold">Admin Email id</label>
+	  <div class="col-10 mb-3">
+      <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+	  <div class="invalid-feedback">
+          Please enter a valid Email id.
+        </div>
+    </div>
+	<label for="pass" class="col-sm-2 col-form-label font-weight-bold mt-2">Password</label>
+	  <div class="col-10 mb-3 mt-2">
+      <input type="password" class="form-control" id="pass" placeholder="Enter Your Password" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+	  <div class="invalid-feedback">
+          Please enter a valid Password.
+        </div>
+    </div>
+  </div>
+  <a style="color:white" href="index.html">
+  <button class="btn btn-danger" type="button">Cancel</button>
+  </a>
+  <button class="btn btn-success" type="submit">Login</button>
+</form>
+			</div>
+        </div>
+    </div>
+    <!-- All of the Node.js APIs are available in this renderer process. 
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.-->
+
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+document.getElementById('loginclick').addEventListener('submit',request);
+</script>
+</body>
+
+</html>

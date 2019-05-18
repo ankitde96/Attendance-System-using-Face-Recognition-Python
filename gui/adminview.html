@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+	body{
+	background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2F2F2, #F0F0F0, #E8E8E8 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+	</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+	<br/>
+        <div class="text-center mt-3 text-capitalize font-weight-bold mb-3">
+            <u><h5>ATTENDANCE SYSTEM BY FACE RECOGNITION USING PYTHON AND ELECTRON JS</h5></u>
+			<br/>
+			<h3 style="color:green"><u>Admin Dashboard</u></h3>
+        </div>
+		<div class="text-right mr-4">
+		<a class="mr-2" style="color:white" href="editprofile.html">
+				<button class="btn btn-light">Edit Profile</button>
+				</a>
+				<a class="mr-4" style="color:white" href="index.html">
+				<button class="btn btn-danger">Logout</button>
+				</a>
+		</div>
+		<br/><br/>
+        <div class="row mt-3 text-center">
+            <div class="col-4 offset-2">
+			<div class="row">
+			<div class="col-12 mt-3 mb-3">
+                <img src="icons/human.png"/>
+				</div>
+				<div class="col-12 mt-3">
+				<a style="color:white" href="addface.html">
+				<button class="btn btn-info">Add Face</button>
+				</a>
+				</div>
+            </div>
+			</div>
+            <div class="col-4">
+			<div class="row">
+			<div class="col-12 mt-3 mb-3">
+                <img src="icons/database.png"/>
+				</div>
+				<div class="col-12 mt-3">
+				<a style="color:white" href="allrecords.html">
+				<button class="btn btn-info">Check All Students Records</button>
+				</a>
+				</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- All of the Node.js APIs are available in this renderer process. 
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.-->
+
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

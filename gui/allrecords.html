@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition System</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="linkers/details.js"></script>
+	
+	<style>
+	body{
+	background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2F2F2, #F0F0F0, #E8E8E8 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+	</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+	<br/>
+        <div class="text-center mt-3 text-capitalize font-weight-bold mb-3">
+            <h5 class="mb-3"><u>ATTENDANCE SYSTEM BY FACE RECOGNITION USING PYTHON AND ELECTRON JS</u></h5>
+			<br/>
+			<div class="text-center mb-3">
+			<img src="icons/server.png"/>
+			<br/>
+			<h4 class="mb-3 mt-3" style="color:blueviolet"><u>All Records</u></h4>
+			</div>
+        </div>
+		<div class="text-right mr-4">
+		<a class="mr-2" style="color:white" href="adminview.html">
+				<button class="btn btn-light">Admin Dashboard</button>
+				</a>
+		<a class="mr-4" style="color:white" href="index.html">
+				<button class="btn btn-danger">Logout</button>
+				</a>
+		</div>
+        <div class="text-center">
+            
+			<table id="details" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>STD ID</th>
+                <th>Student/Employee Id</th>
+                <th>Student/Employee Email id</th>
+                <th>Student/Employee Full Name</th>
+				<th>Attendance Details</th>
+				<th>Delete</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>STD ID</th>
+                <th>Student/Employee Id</th>
+                <th>Student/Employee Email id</th>
+                <th>Student/Employee Full Name</th>
+				<th>Attendance Details</th>
+				<th>Delete</th>
+            </tr>
+        </tfoot>
+    </table>
+			
+			
+        </div>
+    </div>
+    <!-- All of the Node.js APIs are available in this renderer process. 
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.-->
+
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+		var $ = require( 'jquery' );
+require( 'datatables.net-bs4' )( $ );
+const jsdom = require("jsdom");
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"> </script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"> </script>
+</body>
+
+</html>
